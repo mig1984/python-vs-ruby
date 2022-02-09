@@ -43,9 +43,17 @@ other URLs return error 404
 
 ### example benchmarks
 
-ab -n 10000 -c 1000 http://127.0.0.1:8080/api/current-time
+ab -n 50000 -c 1000 http://127.0.0.1:8080/api/current-time
+
+my results (4 cores):
+  python Requests per second:    2990.25 [#/sec] (mean)  
+  ruby Requests per second:    14904.16 [#/sec] (mean)
 
 ab -n 1000 -c 100 http://127.0.0.1:8080/api/bigdata
+
+my results (4 cores):
+  python Requests per second:    6.59 [#/sec] (mean)  
+  ruby Requests per second:    117.84 [#/sec] (mean)
 
 
 ## direcotries bench1-*

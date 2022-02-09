@@ -14,7 +14,7 @@ class App < Roda
       r.response['Content-Type'] = 'application/json'
 
       r.on 'current-time' do
-        {'timestamp'=>Time.now.to_i}
+        {'timestamp'=>Time.now.to_i.to_s}.to_json
       end
 
       r.on 'bigdata' do
@@ -27,7 +27,7 @@ class App < Roda
       end
 
       r.on Integer, /([a-z]+)/ do |i, rxp|
-        {'int'=>i, 'regex'=>rxp.to_s}.to_json
+        {'int'=>i, 'regex'=>rxp}.to_json
       end
 
     end

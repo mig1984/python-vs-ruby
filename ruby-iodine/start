@@ -1,0 +1,3 @@
+#!/bin/sh
+
+bundle exec iodine -p 8080 -w 4

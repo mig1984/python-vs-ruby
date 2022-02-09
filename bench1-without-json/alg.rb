@@ -1,5 +1,3 @@
-require 'json'
-
 now = Time.now
 
 1000.times do

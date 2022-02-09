@@ -30,7 +30,7 @@ other URLs return error 404
 ### how to run a benchmark
 
 ```bash
-  cd ruby-iodine  
+  cd ruby-roda  
   ./install # expects ruby version 3 installed  
   ./start   # starts webserver on port 8080 with 4 workers
 ```

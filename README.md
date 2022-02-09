@@ -2,43 +2,44 @@
 
 ### testing URLs:
 
+```
 /
   return string 'Hello World!'
 
 
 everything under /api is Content-Type: application/json:
 
-/api/current-time
+/api/current-time  
   {'timestamp'=>12345678}
 
-/api/bigdata
-  {0=>[99, 98, 97, .. 0],
-   1=>[99, 98, 97, .. 0],
-   ..
-   1999=>[99, 98, 97, .. 0] }
+/api/bigdata  
+  {0=>[99, 98, 97, .. 0],  
+   1=>[99, 98, 97, .. 0],  
+   ..  
+   1999=>[99, 98, 97, .. 0] }  
 
-TODO in python (not implemented yet)
-/api/INTEGER/[a-z]+
-  {"int"=>INTEGER, "regex"=>"matching_string"}
-  example: http://127.0.0.1:8080/api/12/foobar
-  returns json {"int":12,"regex":"foobar"}
-
+TODO in python (not implemented yet)  
+/api/INTEGER/[a-z]+  
+  {"int"=>INTEGER, "regex"=>"matching_string"}  
+  example: http://127.0.0.1:8080/api/12/foobar  
+  returns json {"int":12,"regex":"foobar"}  
 
 other URLs return error 404
+```
 
 ### how to run a benchmark
 
-`bash
-  cd ruby-iodine
-  ./install # expects ruby version 3 installed
+```bash
+  cd ruby-iodine  
+  ./install # expects ruby version 3 installed  
   ./start   # starts webserver on port 8080 with 4 workers
-`
+```
 
-`bash
-  cd python-fastapi
-  ./install # expects python version 3 installed
+```bash
+  cd python-fastapi  
+  ./install # expects python version 3 installed  
   ./start   # starts webserver on port 8080 with 4 workers
-`
+```
 
 ### example benchmarks
 
